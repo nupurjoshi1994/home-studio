@@ -1,0 +1,18 @@
+<div class="toolbar">
+  <button type="button" [class.active]="store.viewMode() === '2d'" (click)="setMode('2d')">2D plan</button>
+  <button type="button" [class.active]="store.viewMode() === '3d'" (click)="setMode('3d')">3D view</button>
+  <span class="hint">
+    @if (store.viewMode() === '2d') {
+      Scroll to zoom. Right-drag to pan. Drag furniture to move it.
+    } @else {
+      Orbit, zoom and pan the camera. Click and drag furniture on the floor.
+    }
+  </span>
+</div>
+<div class="viewport">
+  @if (store.viewMode() === '2d') {
+    <app-floor-plan-2d />
+  } @else {
+    <app-scene-3d />
+  }
+</div>

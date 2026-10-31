@@ -1,0 +1,57 @@
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  background: #f3f5f8;
+  color: #1c242c;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #d5dbe3;
+  background: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 0;
+  color: #5c6570;
+  font-size: 0.8rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 260px;
+  min-height: 0;
+}
+
+aside,
+main {
+  min-height: 0;
+  min-width: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.left,
+.right {
+  background: #fff;
+}
+
+.left {
+  border-right: 1px solid #d5dbe3;
+}
+
+.right {
+  border-left: 1px solid #d5dbe3;
+}

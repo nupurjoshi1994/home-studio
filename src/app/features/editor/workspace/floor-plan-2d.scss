@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  background: #eef2f6;
+  touch-action: none;
+  cursor: grab;
+}
+
+::ng-deep .floor {
+  fill: #f4efe8;
+  stroke: none;
+}
+
+::ng-deep .wall {
+  stroke: #3f4a56;
+  stroke-linecap: square;
+}
+
+::ng-deep .furniture {
+  cursor: move;
+}
+
+::ng-deep .furniture rect {
+  stroke: transparent;
+  stroke-width: 40;
+}
+
+::ng-deep .furniture.selected rect {
+  stroke: #1d6fd8;
+}
+
+::ng-deep .furniture-label {
+  fill: #1c242c;
+  font-size: 180px;
+  pointer-events: none;
+  font-family: Inter, system-ui, sans-serif;
+}

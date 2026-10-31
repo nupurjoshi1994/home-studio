@@ -1,0 +1,25 @@
+<h2>Properties</h2>
+@if (store.selectedFurniture(); as item) {
+  <label>
+    Name
+    <input [value]="item.name" (input)="onName($event)" />
+  </label>
+  <label>
+    Width (mm)
+    <input type="number" min="1" [value]="item.size.w" (input)="onSize('w', $event)" />
+  </label>
+  <label>
+    Depth (mm)
+    <input type="number" min="1" [value]="item.size.d" (input)="onSize('d', $event)" />
+  </label>
+  <label>
+    Height (mm)
+    <input type="number" min="1" [value]="item.size.h" (input)="onSize('h', $event)" />
+  </label>
+  <label>
+    Rotation (deg)
+    <input type="number" [value]="item.rotationDeg" (input)="onRotation($event)" />
+  </label>
+} @else {
+  <p class="empty">Select furniture in the 2D or 3D workspace to edit it.</p>
+}

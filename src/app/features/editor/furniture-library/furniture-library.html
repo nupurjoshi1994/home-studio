@@ -1,0 +1,15 @@
+<h2>Furniture</h2>
+<p class="hint">Click an item to place it in the room.</p>
+<ul>
+  @for (item of catalog; track item.id) {
+    <li>
+      <button type="button" (click)="add(item.id)">
+        <span class="swatch" [style.background]="item.color"></span>
+        <span>
+          <strong>{{ item.name }}</strong>
+          <small>{{ item.defaultSize.w }} × {{ item.defaultSize.d }} × {{ item.defaultSize.h }} mm</small>
+        </span>
+      </button>
+    </li>
+  }
+</ul>
